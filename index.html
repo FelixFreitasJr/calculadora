@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Responsiva</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
+        <h2>Calculadora</h2>
         <div class="display">
             <div class="history-container">
                 <span id="history-label">Histórico de Operações:</span>
@@ -18,7 +19,7 @@
         <div class="buttons">
             <!--linha 1-->
             <button class="btn-f" onclick="clearDisplay()">C</button>
-            <button class="btn-f" onclick="deleteLastChar()">DEL</button>
+            <button class="btn-f" onclick="deletLastChar()">Del</button>
             <button class="btn-f" onclick="appendToDisplay('/')">/</button>
             <button class="btn-f" onclick="appendToDisplay('*')">*</button>
             <!--linha 2-->
@@ -42,8 +43,11 @@
         </div> <!--buttons-->
     </div> <!--calculator-->
     <footer>
-        <p>Desenvolvido por Felix Freitas</p>
-        <p>Veja mais no <a href="https://github.com/FelixFreitasJr">GitHub</a> | <a href="https://github.com/FelixFreitasJr/calculadora">Documentação do Projeto</a></p>
+	<p>Desenvolvido por Felix Freitas Jr</p>
+        <p>Veja mais no 
+            <a href="https://github.com/FelixFreitasjr">GitHub</a> | 
+            <a href="https://github.com/FelixFreitasjr/calculadora">Documentação do Projeto</a>
+        </p>
     </footer>
     <script src="script.js"></script>
 </body>
