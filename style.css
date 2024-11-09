@@ -1,10 +1,12 @@
 body {
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
+    margin:0;
 }
 
 .calculator {
@@ -21,20 +23,19 @@ h2{
 }
 
 .display {
-    margin-top:0px;
     margin-bottom: 10px;
 }
 
 .history-container {
+    position:relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 0px;
 }
 
 .history-label {
     font-size: 14px;
     color: #333;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 #display,
@@ -108,6 +109,23 @@ h2{
     background-color: #ad2e58;
 }
 
+footer{
+    margin-top:20px;
+    text-align:center;
+}
+
+footer p{
+    font-size:14px;
+    margin:5px 0;
+}
+
+footer a{
+    color:#007bff;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+}
 /* Media queries para responsividade */
 
 @media (max-width: 400px){
