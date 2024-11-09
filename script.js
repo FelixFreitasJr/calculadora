@@ -9,7 +9,12 @@ function clearDisplay() {
     const history = document.getElementById('history');
     history.value = '';
     const historyLabel = document.getElementById('history-label');
-    historyLabel.style.display = 'none';
+    historyLabel.style.color = '#fff';
+}
+
+function deleteLastChar(){
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0,-1);
 }
 
 function calculate() {
@@ -21,7 +26,7 @@ function calculate() {
         history.value = `${display.value} = ${result}`;
         addToHistory(display.value, result);
         display.value = result;
-        historyLabel.style.display = 'block';
+        historyLabel.style.color = '#333';
     } catch (e) {
         display.value = 'Erro';
     }
@@ -44,10 +49,10 @@ function displayHistory() {
     });
     if (historyArray.length > 0) {
         historyElement.value = historyArray[historyArray.length - 1];
-        historyLabel.style.display = 'block';
+        historyLabel.style.color = '#333';
     } else {
         historyElement.value = '';
-        historyLabel.style.display = 'none';
+        historyLabel.style.color = '#fff';
     }
 }
 
@@ -61,6 +66,8 @@ document.addEventListener('keydown', function(event) {
         event.preventDefault();
         calculate();
     } else if (key === 'Backspace'){
+        deleteLastChar();
+    } else if (key === 'Escape') {
         clearDisplay();
     }
 });
